@@ -1,0 +1,8 @@
+{% extends "main/paginator.html" %}
+
+{% block content %}
+    {% for category in category_list %}
+    <p><a href="{% url 'category_detail' pk=category.pk %}">{{ category.name }}</a></p>
+    <p>{{ category.name }}</p>
+    {% endfor %}
+{% endblock %}

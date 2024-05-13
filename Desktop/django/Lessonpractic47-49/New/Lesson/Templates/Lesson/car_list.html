@@ -1,0 +1,10 @@
+{% extends "main/paginator.html" %}
+
+{% block content %}
+    {% for car in car_list %}
+    <p><a href="{% url 'car_detail' pk=car.pk %}">{{ car.name }}</a></p>
+    <p>{{ car.content }}</p>
+    <p>{{ car.created }}</p>
+    <p>{{ car.category }}</p>
+    {% endfor %}
+{% endblock %}

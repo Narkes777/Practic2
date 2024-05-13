@@ -1,0 +1,10 @@
+{% extends "main/navbar.html" %}
+
+
+{% block content %}
+    <h1>Car Detail</h1>
+    <p>{{ car.name }}</p>
+    <a href="{% url 'car_update' pk=car.pk %}">Создать</a>
+    <a href="{% url 'car_delete' pk=car.pk %}">Удалить</a>
+    <p>---------</p>
+{% endblock %}

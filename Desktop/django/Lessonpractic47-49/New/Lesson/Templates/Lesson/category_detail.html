@@ -1,0 +1,10 @@
+{% extends "main/navbar.html" %}
+
+
+{% block content %}
+    <h1>Category Detail</h1>
+    <p>{{ category.name }}</p>
+    <a href="{% url 'category_update' pk=category.pk %}">Создать</a>
+    <a href="{% url 'category_delete' pk=category.pk %}">Удалить</a>
+    <p>---------</p>
+{% endblock %}
